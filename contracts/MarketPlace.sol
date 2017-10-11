@@ -1,6 +1,8 @@
 pragma solidity ^0.4.11;
 
-contract MarketPlace {
+import "./Owned.sol";
+
+contract MarketPlace is Owned {
 
   // Custom types
   struct Article {
@@ -30,6 +32,7 @@ contract MarketPlace {
     string _name,
     uint256 _price);
 
+
   //sell an article
   function sellArticle(string _name, string _description, uint256 _price) public {
     // a new article
@@ -45,7 +48,7 @@ contract MarketPlace {
         _price
       );
 
-    // trigger the event 
+    // trigger the event
     sellArticleEvent(articleCounter, msg.sender, _name, _price);
   }
 
@@ -110,5 +113,10 @@ contract MarketPlace {
 
     // trigger the event
     buyArticleEvent(_id, article.seller, article.buyer, article.name, article.price);
+  }
+
+  //kill the smart contract
+  function kill() onlyOwner {
+    selfdestruct(owner);
   }
 }
