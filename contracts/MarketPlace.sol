@@ -31,22 +31,22 @@ contract MarketPlace {
     uint256 _price);
 
   //sell an article
-  function sellArticle(string _name, string _description, uint256 _price)
-  public {
+  function sellArticle(string _name, string _description, uint256 _price) public {
     // a new article
     articleCounter++;
 
     //store this article
     articles[articleCounter] = Article(
-      articleCounter,
-      msg.sender,
-      0x0,
-      _name,
-      _description,
-      _price
+        articleCounter,
+        msg.sender,
+        0x0,
+        _name,
+        _description,
+        _price
       );
 
-    sellArticleEvent(articleCounter,msg.sender,_name,_price);
+    // trigger the event 
+    sellArticleEvent(articleCounter, msg.sender, _name, _price);
   }
 
   // fetch the number of articles in the contract

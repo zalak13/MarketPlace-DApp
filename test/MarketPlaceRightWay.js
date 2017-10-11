@@ -30,8 +30,6 @@ contract('MarketPlace',function(accounts){
     });
   });
 
-
-
   // Test case: sell a first article
   it("should let us sell a first article", function() {
     return MarketPlace.deployed().then(function(instance) {

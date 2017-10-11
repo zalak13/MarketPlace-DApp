@@ -10,7 +10,7 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +27,7 @@
 <body>
   <div class="container">
     <div class="jumbotron text-center">
-      <h1>MarketPlace</h1>
+      <h1>Market Place</h1>
     </div>
 
     <div class="col-md-12" id="article-list">
@@ -45,7 +45,7 @@
             <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle">Sell an article</button>
           </div>
         </div>
-        <ul id ="events" class="collapse list-group"></ul>
+        <ul id="events" class="collapse list-group"></ul>
       </div>
 
       <div id="articlesRow" class="row">
@@ -65,7 +65,6 @@
           <strong>Description</strong>: <span class="article-description"></span><br/>
           <strong>Price (ETH)</strong>: <span class="article-price"></span><br/>
           <strong>Sold by</strong>: <span class="article-seller"></span><br/>
-          <strong>Bought by</strong>: <span class="article-buyer"></span><br/>
         </div>
         <div class="panel-footer">
           <button type="button" class="btn btn-primary btn-success btn-buy" onclick="App.buyArticle(); return false;">Buy</button>
@@ -106,7 +105,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle();return false;">Submit</button>
+          <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); return false;">Submit</button>
           <button type="button" class="btn" data-dismiss="modal">Close</button>
         </div>
       </div>
