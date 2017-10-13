@@ -2,7 +2,7 @@
 * Implemented a DApp to create a marketplace on Ethereum Framework.
 
 # GitHub Page
- Local instance of [Market Place](https://zalak13.github.io/MarketplaceUsingEthereum/)
+ Local instance of [Market Place](https://zalak13.github.io/MarketPlace-DApp/)
 
 # Inspiration:
 * CraigList.
